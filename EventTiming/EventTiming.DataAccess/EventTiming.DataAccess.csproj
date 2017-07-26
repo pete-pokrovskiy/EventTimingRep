@@ -51,6 +51,11 @@
   <ItemGroup>
     <Compile Include="EventManager.cs" />
     <Compile Include="EventTimingContext.cs" />
+    <Compile Include="Migrations\201707261446216_Initial.cs" />
+    <Compile Include="Migrations\201707261446216_Initial.Designer.cs">
+      <DependentUpon>201707261446216_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +67,11 @@
       <Project>{e80044d4-d9a3-4b1e-b111-d0746dfb59aa}</Project>
       <Name>EventTiming.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707261446216_Initial.resx">
+      <DependentUpon>201707261446216_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

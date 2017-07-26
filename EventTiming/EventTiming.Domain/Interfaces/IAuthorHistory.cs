@@ -2,7 +2,7 @@
 {
     public interface IAuthorHistory
     {
-        int UserId { get; set; }
+        int? UserId { get; set; }
         User User { get; set; }
     }
 }

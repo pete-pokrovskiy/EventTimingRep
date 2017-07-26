@@ -13,7 +13,9 @@ namespace EventTiming.Domain
 
         public DateTime CreatedOn { get; set; }
         public DateTime ModifiedOn { get; set; }
-        public int UserId { get; set; }
+
+        //важно делать свойство nullable, чтобы не было cascade delete - если удаляем пользователя, то не удаляем событие
+        public int? UserId { get; set; }
         public User User { get; set; }
     }
 }
